@@ -11,8 +11,8 @@
 	<groupId>com.example</groupId>
 	<artifactId>ai-openai-helloworld</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ai-helloworld</name>
-	<description>RESTful web application</description>
+	<name>ai-openai-helloworld</name>
+	<description>Simple AI Application using bOpenAPI Service</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

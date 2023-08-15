@@ -17,7 +17,7 @@ public class SimpleAiController {
 	}
 
 	@GetMapping("/ai/simple")
-	public String completion(@RequestParam(value = "text", defaultValue = "Tell me a joke") String text) {
-		return llmClient.generate(text);
+	public Completion completion(@RequestParam(value = "message", defaultValue = "Tell me a joke") String text) {
+		return new Completion(llmClient.generate(text));
 	}
 }

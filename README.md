@@ -3,7 +3,7 @@
 This project contains a web service that will accept HTTP GET requests at
 `http://localhost:8080/ai/simple`.
 
-There is optional `text` parameter whose default value is "Tell me a joke".
+There is optional `message` parameter whose default value is "Tell me a joke".
 
 The response to the request is from the OpenAI ChatGPT Service.
 
@@ -44,9 +44,9 @@ Why don't scientists trust atoms?
 Because they make up everything!
 ```
 
-Now using the `text` request parameter
+Now using the `message` request parameter
 ```shell
-curl --get  --data-urlencode 'text=Tell me a joke about a cow.' http://localhost:8080/ai/simple 
+curl --get  --data-urlencode 'message=Tell me a joke about a cow.' http://localhost:8080/ai/simple 
 ```
 
 A sample response is
@@ -57,3 +57,7 @@ Why did the cow go to space?
 Because it wanted to see the mooooon!
 ```
 
+Alternatively use the `httpie` clinet
+```shell
+http 
+```

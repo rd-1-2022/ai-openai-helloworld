@@ -36,28 +36,22 @@ curl http://localhost:8080/ai/simple
 
 A sample response is 
 
-```text
-Sure, here's a classic one for you:
-
-Why don't scientists trust atoms?
-
-Because they make up everything!
+```json
+{"completion":"Sure, here's a classic one for you:\n\nWhy don't scientists trust atoms?\n\nBecause they make up everything!"}
 ```
 
 Now using the `message` request parameter
 ```shell
-curl --get  --data-urlencode 'message=Tell me a joke about a cow.' http://localhost:8080/ai/simple 
+curl --get --data-urlencode 'message=Tell me a joke about a cow.' http://localhost:8080/ai/simple 
 ```
 
 A sample response is
 
-```text
-Why did the cow go to space?
-
-Because it wanted to see the mooooon!
+```json
+{"completion":"Why did the cow go to space?\n\nBecause it wanted to see the \"moooon\" up close!"}
 ```
 
-Alternatively use the `httpie` clinet
+Alternatively use the `httpie` client
 ```shell
-http 
+http :8080/ai/simple message=="Tell me a joke about a cow."
 ```

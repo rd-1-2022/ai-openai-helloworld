@@ -7,7 +7,7 @@ There is optional `message` parameter whose default value is "Tell me a joke".
 
 The response to the request is from the OpenAI ChatGPT Service.
 
-## Prerequisite
+## Prerequisites
 
 Before using the AI commands, make sure you have a developer token from OpenAI.
 
@@ -20,6 +20,9 @@ Exporting an environment variable is one way to set that configuration property.
 export SPRING_AI_OPENAI_API_KEY=<INSERT KEY HERE>
 ```
 
+Setting the API key is all you need to run the application.
+However, you can find more information on setting started in the [Spring AI reference documentation section on OpenAI Chat](https://docs.spring.io/spring-ai/reference/api/clients/openai-chat.html).
+
 ## Building and running
 
 ```
@@ -31,7 +34,7 @@ export SPRING_AI_OPENAI_API_KEY=<INSERT KEY HERE>
 To get a response to the default request of "Tell me a joke"
 
 ```shell 
-curl http://localhost:8080/ai/simple
+curl localhost:8080/ai/simple
 ```
 
 A sample response is 
@@ -46,7 +49,7 @@ Because they make up everything!
 
 Now using the `message` request parameter
 ```shell
-curl --get  --data-urlencode 'message=Tell me a joke about a cow.' http://localhost:8080/ai/simple 
+curl --get  --data-urlencode 'message=Tell me a joke about a cow.' localhost:8080/ai/simple 
 ```
 
 A sample response is
@@ -57,7 +60,7 @@ Why did the cow go to space?
 Because it wanted to see the mooooon!
 ```
 
-Alternatively use the `httpie` clinet
+Alternatively use the [httpie](https://httpie.io/) client
 ```shell
-http 
+http localhost:8080/ai/simple message=='Tell me a joke about a cow.'
 ```

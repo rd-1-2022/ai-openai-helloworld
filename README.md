@@ -1,4 +1,4 @@
-# Simple Spring AI
+# Spring AI with OpenAI
 
 This project contains a web service that will accept HTTP GET requests at
 `http://localhost:8080/ai/simple`.

@@ -8,16 +8,19 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
-class SimpleAiController {
-
+class AIController {
 	private final ChatClient chatClient;
 
-	SimpleAiController(ChatClient.Builder chatClientBuilder) {
-		this.chatClient = chatClientBuilder.build();
+	AIController(ChatClient chatClient) {
+		this.chatClient = chatClient;
 	}
-
-	@GetMapping("/ai/simple")
-	public Map<String, String> completion(@RequestParam(value = "message", defaultValue = "Tell me a joke") String message) {
-		return Map.of("generation", chatClient.prompt().user(message).call().content());
+	@GetMapping("/ai")
+	Map<String, String> completion(@RequestParam(value = "message", defaultValue = "Tell me a joke") String message) {
+		return Map.of(
+				"completion",
+				chatClient.prompt()
+						.user(message)
+						.call()
+						.content());
 	}
 }

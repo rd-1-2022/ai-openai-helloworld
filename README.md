@@ -34,7 +34,7 @@ However, you can find more information on setting started in the [Spring AI refe
 To get a response to the default request of "Tell me a joke"
 
 ```shell 
-curl localhost:8080/ai/simple
+curl localhost:8080/ai
 ```
 
 A sample response is 
@@ -49,7 +49,7 @@ Because they make up everything!
 
 Now using the `message` request parameter
 ```shell
-curl --get  --data-urlencode 'message=Tell me a joke about a cow.' localhost:8080/ai/simple 
+curl --get  --data-urlencode 'message=Tell me a joke about a cow.' localhost:8080/ai 
 ```
 
 A sample response is
@@ -62,5 +62,5 @@ Because it wanted to see the mooooon!
 
 Alternatively use the [httpie](https://httpie.io/) client
 ```shell
-http localhost:8080/ai/simple message=='Tell me a joke about a cow.'
+http localhost:8080/ai message=='Tell me a joke about a cow.'
 ```

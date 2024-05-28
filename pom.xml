@@ -12,7 +12,7 @@
 	<artifactId>ai-openai-helloworld</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ai-openai-helloworld</name>
-	<description>Simple AI Application using bOpenAPI Service</description>
+	<description>Simple AI Application using OpenAPI Service</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -22,7 +22,7 @@
 			<dependency>
 				<groupId>org.springframework.ai</groupId>
 				<artifactId>spring-ai-bom</artifactId>
-				<version>1.0.0-SNAPSHOT</version>
+				<version>1.0.0.M1</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

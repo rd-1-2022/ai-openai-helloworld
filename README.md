@@ -21,7 +21,7 @@ export SPRING_AI_OPENAI_API_KEY=<INSERT KEY HERE>
 ```
 
 Setting the API key is all you need to run the application.
-However, you can find more information on setting started in the [Spring AI reference documentation section on OpenAI Chat](https://docs.spring.io/spring-ai/reference/api/clients/openai-chat.html).
+However, you can find more information on setting started in the [Spring AI reference documentation section on OpenAI Chat](https://docs.spring.io/spring-ai/reference/api/chat/openai-chat.html).
 
 ## Building and running
 
